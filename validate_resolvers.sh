@@ -7,8 +7,9 @@
 # and only receives two packets (one on UDP/53, one on TCP/53)
 #
 # Use this for gathering sample data for analysis related to DNS
-# Please don't use this for something nefarious, thanks.
-#
+# Please don't use this for something nefarious, thanks. This will
+# send two TCP SYN packets to each host in the resolver_candidates.lst
+# file.
 #
 LIST=resolver_candidates.lst
 SWEEP_OUTFILE=$(mktemp)
