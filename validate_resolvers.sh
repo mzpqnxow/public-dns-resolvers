@@ -17,7 +17,7 @@ OUTFILE=resolvers-confirmed-$(date +%Y-%m-%d).lst
 PPS_RATE=2048
 TEST_DOMAIN=google.com
 HOST_OPTIONS="-t a -W 2"
-# setcap CAP_NET_RAW+ep /usr/bin/masscan to avoid usage of sudo
+# sudo setcap CAP_NET_RAW+ep /usr/bin/masscan to avoid usage of sudo
 # Otherwise, fill this in with the path to sudo
 SUDO=
 
