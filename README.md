@@ -4,7 +4,7 @@ Check a list of hosts for TCP or UDP DNS services. Not terribly invasive since e
 
 ## What for eh?
 
-Use this for gathering sample data for analysis related to DNS. Please don't use this for something nefarious, thanks. This will send two TCP SYN packets to each host in the resolver_candidates.lst file.
+Use this for gathering sample data for analysis related to DNS. Please don't use this for something nefarious, thanks. This will send 3 packets to each host- a UDP datagram, a TCP with SYN flag set, and TCP with RST set.
 
 ## Dependencies for Debian/Ubuntu
  
