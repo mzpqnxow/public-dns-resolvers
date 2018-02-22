@@ -11,6 +11,15 @@
 # send two TCP SYN packets to each host in the resolver_candidates.lst
 # file.
 #
+# Dependencies for Debian/Ubuntu:
+#  $ sudo apt-get install bind9utils build-essential clang libpcap-dev
+#  $ git clone https://github.com/robertdavidgraham/masscan
+#  $ cd masscan
+#  $ make
+#  $ sudo make install
+#  $ sudo setcap CAP_NET_RAW+ep /usr/bin/masscan
+#
+
 LIST=resolver_candidates.lst
 SWEEP_OUTFILE=$(mktemp)
 UP_OUTFILE=up
