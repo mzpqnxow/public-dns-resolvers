@@ -36,6 +36,8 @@ SUDO=
 $SUDO masscan -iL "$LIST" -p U:53,53 -oG "$SWEEP_OUTFILE" --rate "$PPS_RATE"
 mkdir -p "${TMPDIR}"
 rm -f "${TMPDIR}/{tcp,udp}-up"
+mkdir -p "${OUTDIR}"
+rm -f "${OUTDIR}/*"
 for PROTOCOL in udp tcp
 do
     PROTOCOL_OUTFILE="${TMPDIR}/${PROTOCOL}-${UP_OUTFILE}"
